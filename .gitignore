@@ -1,0 +1,8 @@
+/.temp
+/.project
+*.lock
+app/dist
+app/unpackage
+app/.project
+node_modules
+.idea
