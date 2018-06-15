@@ -24,16 +24,9 @@ const getEntryFileContent = (entryPath, vueFilePath) => {
     commonJs = commonJs.replace(/\\/g, '\\\\');
   }
   return `import Vue from "vue";
-import "babel-polyfill";
 import "${commonJs}";
 import Component from "${relativeVuePath}";
 Vue.config.productionTip = false;
-// document.addEventListener("plusready",function () {
-//   new Vue({
-//     el: '#app',
-//     render: (createElement) => createElement(Component),
-//   });
-// },false);
 mui.plusReady(function() {
   new Vue({
     el: '#app',

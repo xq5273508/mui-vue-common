@@ -12,9 +12,6 @@
 </template>
 
 <script>
-  import {ToastService} from "../service/Toast";
-  import {ScanService} from "../service/Scan";
-  import {AudioService} from "../service/Audio";
   import {WindowService} from "../service/Window";
 
   export default {

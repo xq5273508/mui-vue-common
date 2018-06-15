@@ -1,5 +1,6 @@
+import "babel-polyfill";
+
 import {PermissionService} from "./Permission";
-import "../common/common.css";
 
 // let MIN_SOUND_TIME = 800; //最少录音时长
 let recorder = null; //录音对象
