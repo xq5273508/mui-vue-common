@@ -1,3 +1,4 @@
+import "babel-polyfill";
 import "./common.css";
 import "./iconfont/iconfont.css";
 import {ViewToRootPath} from "../service/Path";
