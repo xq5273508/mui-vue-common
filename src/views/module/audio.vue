@@ -19,6 +19,7 @@
                 </li>
             </ul>
         </div>
+        <demo></demo>
         <button @touchstart="start" @touchend="end" type="button" class="mui-btn button-hold">
             按住说话
         </button>
@@ -27,9 +28,11 @@
 
 <script>
   import {AudioService} from "../../service/Audio";
+  import demo from "../../component/Demo";
 
   export default {
     name: "app-audio",
+    components: {demo},
     data() {
       return {
         audio: [],

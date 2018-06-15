@@ -45,41 +45,28 @@
           icon: "mui-icon mui-icon-upload",
           name: "上传",
           key: "upload"
+        }, {
+          icon: "mui-icon mui-icon-upload",
+          name: "测试功能",
+          url: "./aaa/demo.html"
         }]
       };
     },
     methods: {
       jump(_menu) {
-        WindowService.open({
-          id: _menu.key,
-          url: `./module/${_menu.key}.html`
-        });
-      },
-      message() {
-        AudioService.startRecord().then(data => {
-          ToastService.message(JSON.stringify(data));
-          this.file = data.file;
-        }, error => {
-          ToastService.error(error);
-        });
-        setTimeout(function () {
-          AudioService.stopRecord();
-        }, 5000);
-      },
-      play() {
-        AudioService.playLocal(this.file);
-      },
-      open() {
-        WindowService.open({
-          id: "./detail/detail.html",
-          url: "./detail/detail.html"
-        });
-      },
-      scan() {
-        ScanService.scan().then((result) => {
-          ToastService.message(`扫码类型:${result.type},扫码结果:${result.code}`, 10000);
-        });
-      },
+        if (_menu.url) {
+          WindowService.open({
+            id: _menu.key,
+            url: _menu.url
+          });
+        }
+        else {
+          WindowService.open({
+            id: _menu.key,
+            url: `./module/${_menu.key}.html`
+          });
+        }
+      }
     },
     mounted() {
 

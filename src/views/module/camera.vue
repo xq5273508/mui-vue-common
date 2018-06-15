@@ -20,15 +20,19 @@
 
 <script>
   import {ImageService} from "../../service/Image";
+  import {AuthService} from "../../service/Auth";
 
   export default {
     name: "app-camera",
     data() {
       return {image: {}};
     },
+    mounted() {
+      const user = AuthService.user();
+      alert(JSON.stringify(user));
+    },
     methods: {
       camera() {
-
         ImageService.choose().then(_image => {
           this.image = _image;
         })

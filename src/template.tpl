@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="app"></div>
-<!-- built files will be auto injected -->
 <%= htmlWebpackPlugin.options.script %>
+<!-- built files will be auto injected -->
 </body>
 </html>
