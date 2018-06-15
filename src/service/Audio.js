@@ -112,16 +112,15 @@ function startRecordAudio() {
   })
 }
 
-
 //停止录音
 function stopRecordAudio() {
   if (timeoutid) {
     clearTimeout(timeoutid);
-    timeoutid = 0;
-    //移除录音效果
-    hideRecordWindow();
     //停止录音
     recorder.stop();
+    //移除录音效果
+    hideRecordWindow();
+    timeoutid = 0;
   }
 }
 

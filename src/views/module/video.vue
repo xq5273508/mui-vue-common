@@ -1,15 +1,21 @@
 <template>
     <div>
-        <div class="video" v-if="video">
-            <img class="bgVideo" src="../../images/play_v.png" @click="play"/>
-            <video webkit-playsinline="true" preload="auto" :id="video.path"
-                   :src="video.path"
-                   onwebkitfullscreenchange="outFullscreen(this)">
-            </video>
-            <span class="time" v-show="video.size">{{video.size}}</span>
-            <img class="media-remove" src="../../images/delete.png" @click="remove"/>
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon iconfont icon-zuo mui-pull-left"></a>
+            <h1 class="mui-title">视频</h1>
+        </header>
+        <div class="mui-content">
+            <div class="video" v-if="video">
+                <img class="bgVideo" src="../../images/play_v.png" @click="play"/>
+                <video webkit-playsinline="true" preload="auto" :id="video.path"
+                       :src="video.path"
+                       onwebkitfullscreenchange="outFullscreen(this)">
+                </video>
+                <span class="time" v-show="video.size">{{video.size}}</span>
+                <img class="media-remove" src="../../images/delete.png" @click="remove"/>
+            </div>
+            <div @click="record" class="button-video mui-icon mui-icon-videocam"></div>
         </div>
-        <div @click="record" class="button-video mui-icon mui-icon-videocam"></div>
     </div>
 </template>
 

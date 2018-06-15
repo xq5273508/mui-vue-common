@@ -1,24 +1,30 @@
 <template>
     <div>
-        <div class="scan-result">
-            <div class="result-title">
-                扫码结果
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon iconfont icon-zuo mui-pull-left"></a>
+            <h1 class="mui-title">扫码</h1>
+        </header>
+        <div class="mui-content">
+            <div class="scan-result">
+                <div class="result-title">
+                    扫码结果
+                </div>
+                <form class="mui-input-group">
+                    <div class="mui-input-row">
+                        <label>码类型</label>
+                        <input type="text" v-model="code.type" readonly="readonly" placeholder="">
+                    </div>
+                    <div class="mui-input-row">
+                        <label>码值</label>
+                        <input type="text" v-model="code.value" readonly="readonly" placeholder="">
+                    </div>
+                </form>
             </div>
-            <form class="mui-input-group">
-                <div class="mui-input-row">
-                    <label>码类型</label>
-                    <input type="text" v-model="code.type" readonly="readonly" placeholder="">
-                </div>
-                <div class="mui-input-row">
-                    <label>码值</label>
-                    <input type="text" v-model="code.value" readonly="readonly" placeholder="">
-                </div>
-            </form>
-        </div>
-        <div>
-            <button @click="scan" type="button" class="mui-btn mui-btn-primary button-scan">
-                扫码
-            </button>
+            <div>
+                <button @click="scan" type="button" class="mui-btn mui-btn-primary button-scan">
+                    扫码
+                </button>
+            </div>
         </div>
     </div>
 </template>

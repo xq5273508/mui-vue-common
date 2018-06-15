@@ -1,8 +1,8 @@
 <template>
     <div>
         <header class="mui-bar mui-bar-nav">
-            <a class="mui-action-back mui-icon icon-back mui-pull-left">扫描二维码/条形码</a>
-            <a @click="popover" class="right-menu-icon icon-more"></a>
+            <a class="mui-action-back mui-icon iconfont icon-zuo mui-pull-left">扫描二维码/条形码</a>
+            <a @click="popover" class="right-menu-icon iconfont icon-more"></a>
             <a @click="toggle" class="right-menu-words">{{isTurnOn?"关":"开"}}灯</a>
         </header>
         <div class="mui-scroll-wrapper">

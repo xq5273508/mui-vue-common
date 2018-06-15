@@ -1,5 +1,9 @@
 <template>
     <div>
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon iconfont icon-zuo mui-pull-left"></a>
+            <h1 class="mui-title">音频</h1>
+        </header>
         <div class="mui-content">
             <h5 class="mui-content-padded" style="margin: 15px 10px;">录音列表，拖拽(滑动)删除</h5>
             <ul class="mui-table-view">

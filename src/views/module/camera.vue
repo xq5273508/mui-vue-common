@@ -1,13 +1,19 @@
 <template>
     <div>
-        <div v-if="image.name" class="image-preview">
-            <div>点击预览大图</div>
-            <img @click="preview" :src="image.mini">
-        </div>
-        <div>
-            <button @click="camera" type="button" class="mui-btn mui-btn-primary button-camera">
-                图片
-            </button>
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon iconfont icon-zuo mui-pull-left"></a>
+            <h1 class="mui-title">图片</h1>
+        </header>
+        <div class="mui-content">
+            <div v-if="image.name" class="image-preview">
+                <div>点击预览大图</div>
+                <img @click="preview" :src="image.mini">
+            </div>
+            <div>
+                <button @click="camera" type="button" class="mui-btn mui-btn-primary button-camera">
+                    图片
+                </button>
+            </div>
         </div>
     </div>
 </template>
@@ -22,7 +28,7 @@
     },
     methods: {
       camera() {
-        
+
         ImageService.choose().then(_image => {
           this.image = _image;
         })

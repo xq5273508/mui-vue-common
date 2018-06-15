@@ -1,12 +1,18 @@
 <template>
     <div>
-        <div v-if="file">
-            <img style="max-width: 100vw;max-height: 100vh" :src="url+file"/>
-        </div>
+        <header class="mui-bar mui-bar-nav">
+            <a class="mui-action-back mui-icon iconfont icon-zuo mui-pull-left"></a>
+            <h1 class="mui-title">附件</h1>
+        </header>
+        <div class="mui-content">
+            <div v-if="file">
+                <img style="max-width: 100vw;max-height: 100vh" :src="url+file"/>
+            </div>
 
-        <div>
-            <button v-show="!file" @click="upload" class="button-upload mui-icon mui-icon-upload">选择文件上传</button>
-            <button v-show="file" @click="download" class="button-upload mui-icon mui-icon-download">点击下载文件</button>
+            <div>
+                <button v-show="!file" @click="upload" class="button-upload mui-icon mui-icon-upload">选择文件上传</button>
+                <button v-show="file" @click="download" class="button-upload mui-icon mui-icon-download">点击下载文件</button>
+            </div>
         </div>
     </div>
 </template>
